@@ -1,0 +1,57 @@
+{
+    "components": [
+        {
+            "type": "element",
+            "element": "button",
+            "label": "Increase",
+            "id": "button1",
+            "cssClasses": [
+                "bg-green-200"
+            ],
+            "onClick": "increase"
+        },
+        {
+            "type": "element",
+            "element": "input",
+            "value": "",
+            "id": "input1",
+            "cssClasses": [
+                "bg-green-200"
+            ],
+            "onChange": "change"
+        },
+        {
+            "type": "element",
+            "element": "div",
+            "label": "Result:",
+            "id": "text2",
+            "cssClasses": [
+                "bg-green-200"
+            ]
+        },
+        {
+            "type": "function",
+            "name": "increase",
+            "body": "input1.value = parseInt(input1.value) + 1"
+        },
+        {
+            "type": "function",
+            "name": "change",
+            "body": "text2.textContent = input1.value"
+        }
+    ],
+    "handlers": {
+        "increase": {
+            "components": [
+                "button1"
+            ],
+            "event": "click"
+        },
+        "change": {
+            "components": [
+                "input1"
+            ],
+            "event": "input"
+        }
+    }
+}
